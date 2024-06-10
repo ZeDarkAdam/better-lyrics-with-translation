@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1.2.2",
+  "version": "1.3.0",
   "name": "Better Lyrics (Lyrics for Youtube Music)",
   "description": "Better lyrics for YouTube Music",
   "icons": {
@@ -11,7 +11,8 @@
   "permissions": [
     "storage",
     "*://music.youtube.com/*",
-    "*://lyrics-api.boidu.dev/*"
+    "*://lyrics-api.boidu.dev/*",
+    "*://translate.googleapis.com/*"
   ],
   "options_ui": {
     "page": "src/options.html",
@@ -19,15 +20,9 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://music.youtube.com/*"
-      ],
-      "js": [
-        "src/index.js"
-      ],
-      "css": [
-        "src/index.css"
-      ]
+      "matches": ["*://music.youtube.com/*"],
+      "js": ["src/index.js"],
+      "css": ["src/index.css"]
     }
   ],
   "browser_specific_settings": {
