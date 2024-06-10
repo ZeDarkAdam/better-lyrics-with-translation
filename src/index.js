@@ -104,7 +104,8 @@ const timeToInt = (time) => {
 
 // Function to create and inject lyrics
 const createLyrics = () => {
-  const song = document.getElementsByClassName(TITLE_CLASS)[0].innerHTML; // Get the song title
+  // const song = document.getElementsByClassName(TITLE_CLASS)[0].innerHTML; // Get the song title
+  const song = document.getElementsByClassName('ytp-title-link yt-uix-sessionlink')[0].innerText;
   let artist;
   try {
     artist =
